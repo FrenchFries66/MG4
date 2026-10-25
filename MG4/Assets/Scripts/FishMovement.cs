@@ -23,10 +23,11 @@ public class FishMovement : MonoBehaviour
         // Key code reference: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/KeyCode.html 
         //
         // Feature 1 of the rubric should be complete after this.
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             movement.z = -1;
-        }
+        } 
+       
         // STEP 1 -------------------------------------------------------------
 
         // STEP 2 -------------------------------------------------------------
@@ -41,7 +42,14 @@ public class FishMovement : MonoBehaviour
         //      move up and down? Is negative up or down? Is positive up or down?
         //
         // Feature 2 of the rubric should be complete after this.
-        
+        if (Input.GetKey(KeyCode.Q))
+        {
+            movement.y = 1;
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            movement.y = -1;
+        }
 
 
         // STEP 2 -------------------------------------------------------------
